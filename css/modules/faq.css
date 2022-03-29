@@ -1,0 +1,66 @@
+.faq {
+  margin: 60px auto;
+}
+
+.faq-container h1 {
+  text-align: center;
+}
+
+.faq-list {
+  margin: 30px auto 0px;
+  max-width: 960px;
+}
+
+.checkbox-wrapper p {
+  display: none;
+  font-size: 0.975rem;
+}
+
+.checkbox-wrapper label {
+  color: var(--blue);
+  font-weight: bold;
+  display: block;
+  cursor: pointer;
+  padding: 20px 0px;
+  position: relative;
+}
+
+.checkbox-wrapper label:hover {
+  background: var(--background-2);
+}
+
+.checkbox-wrapper label:after {
+  content: '+';
+  position: absolute;
+  color: var(--blue);
+  font-weight: bold;
+  font-size: 1.4rem;
+  right: 0px;
+}
+
+.checkbox-wrapper {
+  border-bottom: 2px solid var(--blue);
+}
+
+.faq-list input {
+  display: none;
+}
+
+.faq-list input:checked + .checkbox-wrapper p {
+  display: block;
+  margin-top: 10px;
+}
+
+.faq-list input:checked + .checkbox-wrapper {
+  padding-bottom: 20px;
+}
+
+.faq-list input:checked + .checkbox-wrapper label:after {
+  content: '-';
+}
+
+@media screen and (max-width: 500px) {
+  .faq {
+    margin: 30px auto;
+  }
+}
