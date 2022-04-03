@@ -28,53 +28,57 @@
   </header>
 
   <section class="mei-content">
-    <div class="container">
-      <nav class="nav-mei">
-        <ul>
-          <li><a href="criarmei.html">Criar MEI</a></li>
-          <li><a href="">Alterar MEI</a></li>
-          <li><a href="">Cancelar MEI</a></li>
-        </ul>
-      </nav>
+
+    <div class="container-mei">
+      <h1 class="title">Crie, Altere ou Cancele <br> seu MEI <span class="emphasis">conosco</span></h1>
+      <p class="paragraph">Encontre conosco o melhor serviço de acessoria para o seu MEI. </p>
     </div>
 
     <div class="container container-form">
       <form action="" class="mei-form">
+        <h2 class="title-form">Escolha o serviço</h2>
+        <input type="radio" name="servico" id="criarmei" value="criarmei" class="input-service" checked>
+        <label for="criarmei" class="label-service">Criar MEI</label>
+        <input type="radio" name="servico" id="cancelarmei" value="cancelarmei" class="input-service">
+        <label for="cancelarmei" class="label-service">Cancelar MEI</label>
+        <input type="radio" name="servico" id="alterarmei" value="alterarmei" class="input-service">
+        <label for="alterarmei" class="label-service">Alterar MEI</label>
+
         <h2 class="title-form">Dados Pessoais</h2>
         <div class="personal-data">
           <div>
             <div>
-              <label for="name">Nome:</label>
-              <input id="name" name="name" type="text" placeholder="Preencha com seu nome">
+              <label for="nome">Nome:</label>
+              <input id="nome" name="nome" type="text" placeholder="Preencha com seu nome" required>
             </div>
             <div>
               <label for="email">E-mail:</label>
-              <input id="email" name="email" type="mail" placeholder="Preencha com seu e-mail">
+              <input id="email" name="email" type="email" placeholder="Preencha com seu e-mail" required>
             </div>
             <div>
               <label for="cpf">CPF:</label>
-              <input id="cpf" name="cpf" type="number" placeholder="000.000.000-00">
+              <input id="cpf" name="cpf" type="number" placeholder="000.000.000-00" required>
             </div>
             <div>
-              <label for="contact">Número de telefone:</label>
-              <input id="contact" name="contact" type="number" placeholder="(00) 00000-0000">
+              <label for="contato">Número de telefone:</label>
+              <input id="contato" name="contato" type="number" placeholder="(00) 00000-0000" required>
             </div>
           </div>
           <div>
             <div class="grid-form-personal-data">
               <div>
                 <label for="rg">RG:</label>
-                <input id="rg" name="rg" type="number" placeholder="Digite o número do seu RG">
+                <input id="rg" name="rg" type="number" placeholder="Digite o número do seu RG" required>
               </div>
               <div>
-                <label for="issuing-agency">Órgão Expeditor:</label>
-                <input id="issuing-agency" name="issuing-agency" type="number" placeholder="Digite o órgão expeditor do seu RG">
+                <label for="orgaoexpeditor">Órgão Expeditor:</label>
+                <input id="orgaoexpeditor" name="orgaoexpeditor" type="text" placeholder="Digite o órgão expeditor do seu RG" required>
               </div>
             </div>
 
             <div>
               <label for="uf-rg">UF RG:</label>
-              <select name="select" id="uf-rg">
+              <select name="select" id="uf-rg" required>
                 <option value="" selected="selected" disabled="disabled">Estado</option>
                 <option value="AC">AC</option>
                 <option value="AL">AL</option>
@@ -107,13 +111,13 @@
             </div>
 
             <div>
-              <label for="date">Data de nascimento:</label>
-              <input id="date" name="date" type="date" placeholder="00/00/0000">
+              <label for="nascimento">Data de nascimento:</label>
+              <input id="nascimento" name="nascimento" type="date" placeholder="00/00/0000" required>
             </div>
 
             <div>
-              <label for="name">Nome Completo da Mãe:</label>
-              <input id="name" name="name" type="text" placeholder="Digite o Nome Completo da Mãe">
+              <label for="nomemae">Nome Completo da Mãe:</label>
+              <input id="nomemae" name="nomemae" type="text" placeholder="Digite o Nome Completo da Mãe" required>
             </div>
 
           </div>
@@ -122,16 +126,16 @@
         <h2 class="title-form">Outras Informações Pessoais</h2>
         <div class="other-personal-data">
           <div>
-            <label for="bank-account">Possui conta bancária ou internet bank?</label>
-            <select name="select" id="bank-account">
+            <label for="possuicontabancaria">Possui conta bancária ou internet bank?</label>
+            <select name="select" id="possuicontabancaria" required>
               <option value="" selected="selected" disabled="disabled">Selecione</option>
               <option value="opt1">Sim</option>
               <option value="opt2">Não</option>
             </select>
           </div>
           <div>
-            <label for="income-tax">Declarou Imposto de Renda nos 2 últimos anos?</label>
-            <select name="select" id="income-tax">
+            <label for="declarouimposto">Declarou Imposto de Renda nos 2 últimos anos?</label>
+            <select name="select" id="declarouimposto" required>
               <option value="" selected="selected" disabled="disabled">Selecione</option>
               <option value="opt1">Sim</option>
               <option value="opt2">Não</option>
@@ -143,13 +147,13 @@
         <div class="mei-data">
           <div class="mei-data-grid-1">
             <div>
-              <label for="fantasy-name">Nome Fantasia do CNPJ MEI:</label>
-              <input type="text" id="fantasy-name" name="fantasy-name" placeholder="Digite o nome da Empresa MEI">
+              <label for="nomefantasia">Nome Fantasia do CNPJ MEI:</label>
+              <input type="text" id="nomefantasia" name="nomefantasia" placeholder="Digite o nome da Empresa MEI" required>
             </div>
 
             <div>
-              <label for="share-capital">Capital Social:</label>
-              <select name="share-capital" id="share-capital">
+              <label for="capitalsocial">Capital Social:</label>
+              <select name="capitalsocial" id="capitalsocial" required>
                 <option value="R$ 1.000,00" selected="selected">R$ 1.000,00</option>
                 <option value="R$ 2.000,00">R$ 2.000,00</option>
                 <option value="R$ 3.000,00">R$ 3.000,00</option>
@@ -160,8 +164,8 @@
           </div>
 
           <div>
-            <label for="occupation">Ocupação Principal do MEI:</label>
-            <select name="occupation" id="occupation">
+            <label for="ocupacao">Ocupação Principal do MEI:</label>
+            <select name="ocupacao" id="ocupacao" required>
               <option value="" selected="selected" disabled="disabled">ESCOLHA AQUI SUA OCUPAÇÃO PRINCIPAL</option>
               <option value="ABATEDOR(A) DE AVES COM COMERCIALIZAÇÃO DO PRODUTO INDEPENDENTE">ABATEDOR(A) DE AVES COM COMERCIALIZAÇÃO DO PRODUTO INDEPENDENTE</option>
               <option value="ACABADOR(A) DE CALÇADOS INDEPENDENTE">ACABADOR(A) DE CALÇADOS INDEPENDENTE</option>
@@ -1112,42 +1116,42 @@
           <div class="address-grid">
             <div>
               <label for="cep">CEP:</label>
-              <input type="number" id="cep" name="cep" placeholder="">
+              <input type="number" id="cep" name="cep" placeholder="" required>
             </div>
 
             <div>
-              <label for="cep">Rua:</label>
-              <input type="text" id="rua" name="rua" placeholder="">
-            </div>
-          </div>
-
-          <div class="address-grid">
-            <div>
-              <label for="number">Número:</label>
-              <input type="number" id="number" name="number" placeholder="">
-            </div>
-
-            <div>
-              <label for="complements">Complemento:</label>
-              <input type="text" id="complements" name="complements" placeholder="">
+              <label for="rua">Rua:</label>
+              <input type="text" id="rua" name="rua" placeholder="" required>
             </div>
           </div>
 
           <div class="address-grid">
             <div>
-              <label for="district">Bairro:</label>
-              <input type="text" id="district" name="district" placeholder="">
+              <label for="numero">Número:</label>
+              <input type="number" id="numero" name="numero" placeholder="" required>
+            </div>
+
+            <div>
+              <label for="complementos">Complemento:</label>
+              <input type="text" id="complementos" name="complementos" placeholder="" required>
+            </div>
+          </div>
+
+          <div class="address-grid">
+            <div>
+              <label for="bairro">Bairro:</label>
+              <input type="text" id="bairro" name="bairro" placeholder="" required>
             </div>
 
             <div class="adress-grid-2">
               <div>
-                <label for="city">Cidade:</label>
-                <input type="text" id="city" name="city" placeholder="">
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade" name="cidade" placeholder="" required>
               </div>
 
               <div>
                 <label for="uf">Estado:</label>
-                <select name="uf" id="uf">
+                <select name="uf" id="uf" required>
                   <option value="" selected="selected" disabled="disabled">Estado</option>
                   <option value="AC">AC</option>
                   <option value="AL">AL</option>
@@ -1181,7 +1185,7 @@
             </div>
           </div>
         </div>
-        <a href="" class="button-payment">Realizar Pagamento</a>
+        <button class="button-payment">Realizar Pagamento</button>
       </form>
     </div>
   </section>

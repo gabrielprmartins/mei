@@ -2,22 +2,36 @@
   padding: 0 20px;
 }
 
-.nav-mei {
-  max-width: 500px;
-  margin: 30px auto 40px;
+
+.container-mei {
+  max-width: 960px;
+  margin: 30px auto;
+  text-align: center;
 }
 
-.nav-mei ul {
-  display: flex;
-  align-items: center;
-  gap: 40px;
+.container-mei p {
+  margin-top: 20px;
 }
 
-.nav-mei ul li a {
+.input-service {
+  display: none;
+}
+
+.label-service {
+  display: inline-block;
+  padding: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.label-service:hover {
+  background-color: var(--blue-2);
+}
+
+.input-service:focus + label,
+.input-service:checked + label {
+  background-color: var(--yellow);
   color: var(--blue);
-  font-weight: bold;
-  padding: 10px 20px;
-  white-space: nowrap;
 }
 
 .container-form {
@@ -58,6 +72,13 @@ input {
   border-radius: 4px;
   font-family: 'Lexend Deca', sans-serif;
   width: 100%;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+input:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 2px var(--yellow);
 }
 
 .personal-data {
@@ -119,6 +140,8 @@ select > option {
 }
 
 .button-payment {
+  font-family: 'Lexend Deca', sans-serif;
+  border: none;
   padding: 20px 40px;
   font-weight: bold;
   color: var(--blue);
@@ -127,6 +150,7 @@ select > option {
   display: inline-block;
   background-color: var(--yellow);
   margin: 30px auto;
+  cursor: pointer;
 }
 
 .button-payment:hover {
