@@ -19,7 +19,9 @@
 .checkbox-wrapper label {
   color: var(--blue);
   font-weight: bold;
-  display: block;
+  display: grid;
+  grid-template-columns: 1fr 30px;
+  align-items: center;
   cursor: pointer;
   padding: 20px 0px;
   position: relative;
