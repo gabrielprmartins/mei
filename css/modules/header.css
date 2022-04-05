@@ -4,8 +4,6 @@
   top: 0;
   width: 100%;
   z-index: 998;
-  /* box-shadow: 2px 1px 20px 0 rgba(0,0,0,0.15); */
-  /* border-bottom: 1px solid var(--yellow); */
 }
 
 .header-container {
@@ -92,8 +90,9 @@
   .menu {
     display: block;
     position: fixed;
-    right: -100%;
+    right: 0;
     top: 0;
+    transform: translate3d(180%, 0, 0);
     width: 50%;
     height: 100vh;
     align-items: center;
@@ -108,7 +107,7 @@
     z-index: 1000;
   }
   .input-open-menu:checked ~ .menu {
-    right: 0;
+    transform: translate3d(0, 0, 0);
   }
 
   .input-open-menu:checked ~ .button-open-menu span {

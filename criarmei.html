@@ -3,20 +3,25 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="language" content="pt-BR">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <title>MEI</title>
+  <link rel="shortcut icon" href="assets/favicon.png" />
+  <title>Cadastro MEI - Crie, Altere ou Cancele seu MEI conosco</title>
+  <meta name="description" content="Encontre conosco o melhor serviço de acessoria para o seu MEI.">
+  <meta name="robots" content="all">
+  <meta name="keywords" content="mei, cnpj, cadastro mei, cnpj mei, microempreendedor individual">
 </head>
 
 <body>
 
   <header class="header">
     <div class="container header-container">
-      <a href="index.html"><img src="assets/logo.svg" alt="MEI"></a>
+      <a href="./"><img src="assets/logo.svg" alt="MEI"></a>
       <input type="checkbox" name="open-menu" id="open-menu" class="input-open-menu">
       <label for="open-menu" class="button-open-menu">
         <span></span>
@@ -25,9 +30,8 @@
       </label>
       <nav class="menu">
         <ul>
-          <li><a href="criarmei.html">Faça seu MEI</a></li>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="index.html#benefits">Vantagens</a></li>
+          <li><a href="./">Home</a></li>
+          <li><a href="./#benefits">Vantagens</a></li>
         </ul>
       </nav>
     </div>
@@ -41,13 +45,13 @@
     </div>
 
     <div class="container container-form">
-      <form action="" class="mei-form">
+      <form action="./enviar.php" method="post" class="mei-form">
         <h2 class="title-form">Escolha o serviço</h2>
-        <input type="radio" name="servico" id="criarmei" value="criarmei" class="input-service" checked>
+        <input type="radio" name="Serviço" id="criarmei" value="Criar MEI" class="input-service" checked>
         <label for="criarmei" class="label-service">Criar MEI</label>
-        <input type="radio" name="servico" id="cancelarmei" value="cancelarmei" class="input-service">
+        <input type="radio" name="Serviço" id="cancelarmei" value="Cancelar MEI" class="input-service">
         <label for="cancelarmei" class="label-service">Cancelar MEI</label>
-        <input type="radio" name="servico" id="alterarmei" value="alterarmei" class="input-service">
+        <input type="radio" name="Serviço" id="alterarmei" value="Alterar MEI" class="input-service">
         <label for="alterarmei" class="label-service">Alterar MEI</label>
 
         <h2 class="title-form">Dados Pessoais</h2>
@@ -55,36 +59,36 @@
           <div>
             <div>
               <label for="nome">Nome:</label>
-              <input id="nome" name="nome" type="text" placeholder="Preencha com seu nome" required>
+              <input id="nome" name="Nome" type="text" placeholder="Preencha com seu nome" required>
             </div>
             <div>
               <label for="email">E-mail:</label>
-              <input id="email" name="email" type="email" placeholder="Preencha com seu e-mail" required>
+              <input id="email" name="E-mail" type="email" placeholder="Preencha com seu e-mail" required>
             </div>
             <div>
               <label for="cpf">CPF:</label>
-              <input id="cpf" name="cpf" type="number" placeholder="000.000.000-00" required>
+              <input id="cpf" name="CPF" type="number" placeholder="000.000.000-00" required>
             </div>
             <div>
               <label for="contato">Número de telefone:</label>
-              <input id="contato" name="contato" type="number" placeholder="(00) 00000-0000" required>
+              <input id="contato" name="Contato" type="number" placeholder="(00) 00000-0000" required>
             </div>
           </div>
           <div>
             <div class="grid-form-personal-data">
               <div>
                 <label for="rg">RG:</label>
-                <input id="rg" name="rg" type="number" placeholder="Digite o número do seu RG" required>
+                <input id="rg" name="RG" type="number" placeholder="Digite o número do seu RG" required>
               </div>
               <div>
                 <label for="orgaoexpeditor">Órgão Expeditor:</label>
-                <input id="orgaoexpeditor" name="orgaoexpeditor" type="text" placeholder="Digite o órgão expeditor do seu RG" required>
+                <input id="orgaoexpeditor" name="Órgão Expeditor" type="text" placeholder="Digite o órgão expeditor do seu RG" required>
               </div>
             </div>
 
             <div>
               <label for="uf-rg">UF RG:</label>
-              <select name="select" id="uf-rg" required>
+              <select name="UF RG" id="uf-rg" required>
                 <option value="" selected="selected" disabled="disabled">Estado</option>
                 <option value="AC">AC</option>
                 <option value="AL">AL</option>
@@ -118,12 +122,12 @@
 
             <div>
               <label for="nascimento">Data de nascimento:</label>
-              <input id="nascimento" name="nascimento" type="date" placeholder="00/00/0000" required>
+              <input id="nascimento" name="Nascimento" type="date" placeholder="00/00/0000" required>
             </div>
 
             <div>
               <label for="nomemae">Nome Completo da Mãe:</label>
-              <input id="nomemae" name="nomemae" type="text" placeholder="Digite o Nome Completo da Mãe" required>
+              <input id="nomemae" name="Nome da Mãe" type="text" placeholder="Digite o Nome Completo da Mãe" required>
             </div>
 
           </div>
@@ -133,18 +137,18 @@
         <div class="other-personal-data">
           <div>
             <label for="possuicontabancaria">Possui conta bancária ou internet bank?</label>
-            <select name="select" id="possuicontabancaria" required>
+            <select name="Possui conta bancária ou internet bank" id="possuicontabancaria" required>
               <option value="" selected="selected" disabled="disabled">Selecione</option>
-              <option value="opt1">Sim</option>
-              <option value="opt2">Não</option>
+              <option value="Sim">Sim</option>
+              <option value="Não">Não</option>
             </select>
           </div>
           <div>
             <label for="declarouimposto">Declarou Imposto de Renda nos 2 últimos anos?</label>
-            <select name="select" id="declarouimposto" required>
+            <select name="Declarou imposto de renda nos 2 últimos anos" id="declarouimposto" required>
               <option value="" selected="selected" disabled="disabled">Selecione</option>
-              <option value="opt1">Sim</option>
-              <option value="opt2">Não</option>
+              <option value="Sim">Sim</option>
+              <option value="Não">Não</option>
             </select>
           </div>
         </div>
@@ -154,12 +158,12 @@
           <div class="mei-data-grid-1">
             <div>
               <label for="nomefantasia">Nome Fantasia do CNPJ MEI:</label>
-              <input type="text" id="nomefantasia" name="nomefantasia" placeholder="Digite o nome da Empresa MEI" required>
+              <input type="text" id="nomefantasia" name="Nome Fantasia" placeholder="Digite o nome da Empresa MEI" required>
             </div>
 
             <div>
               <label for="capitalsocial">Capital Social:</label>
-              <select name="capitalsocial" id="capitalsocial" required>
+              <select name="Capital Social" id="capitalsocial" required>
                 <option value="R$ 1.000,00" selected="selected">R$ 1.000,00</option>
                 <option value="R$ 2.000,00">R$ 2.000,00</option>
                 <option value="R$ 3.000,00">R$ 3.000,00</option>
@@ -171,7 +175,7 @@
 
           <div>
             <label for="ocupacao">Ocupação Principal do MEI:</label>
-            <select name="ocupacao" id="ocupacao" required>
+            <select name="Ocupação" id="ocupacao" required>
               <option value="" selected="selected" disabled="disabled">ESCOLHA AQUI SUA OCUPAÇÃO PRINCIPAL</option>
               <option value="ABATEDOR(A) DE AVES COM COMERCIALIZAÇÃO DO PRODUTO INDEPENDENTE">ABATEDOR(A) DE AVES COM COMERCIALIZAÇÃO DO PRODUTO INDEPENDENTE</option>
               <option value="ACABADOR(A) DE CALÇADOS INDEPENDENTE">ACABADOR(A) DE CALÇADOS INDEPENDENTE</option>
@@ -645,7 +649,7 @@
 
           <div>
             <label for="occupation-2">Ocupação Secundária do MEI – OPCIONAL:</label>
-            <select name="occupation-2" id="occupation-2">
+            <select name="Ocupação Secundária" id="occupation-2">
               <option value="" selected="selected" disabled="disabled">ESCOLHA AQUI SUA OCUPAÇÃO SECUNDÁRIA</option>
               <option value="ABATEDOR(A) DE AVES COM COMERCIALIZAÇÃO DO PRODUTO INDEPENDENTE">ABATEDOR(A) DE AVES COM COMERCIALIZAÇÃO DO PRODUTO INDEPENDENTE</option>
               <option value="ACABADOR(A) DE CALÇADOS INDEPENDENTE">ACABADOR(A) DE CALÇADOS INDEPENDENTE</option>
@@ -1122,42 +1126,42 @@
           <div class="address-grid">
             <div>
               <label for="cep">CEP:</label>
-              <input type="number" id="cep" name="cep" placeholder="" required>
+              <input type="number" id="cep" name="CEP" placeholder="" required>
             </div>
 
             <div>
               <label for="rua">Rua:</label>
-              <input type="text" id="rua" name="rua" placeholder="" required>
+              <input type="text" id="rua" name="Rua" placeholder="" required>
             </div>
           </div>
 
           <div class="address-grid">
             <div>
               <label for="numero">Número:</label>
-              <input type="number" id="numero" name="numero" placeholder="" required>
+              <input type="number" id="numero" name="Número" placeholder="" required>
             </div>
 
             <div>
               <label for="complementos">Complemento:</label>
-              <input type="text" id="complementos" name="complementos" placeholder="" required>
+              <input type="text" id="complementos" name="Complemento" placeholder="" required>
             </div>
           </div>
 
           <div class="address-grid">
             <div>
               <label for="bairro">Bairro:</label>
-              <input type="text" id="bairro" name="bairro" placeholder="" required>
+              <input type="text" id="bairro" name="Bairro" placeholder="" required>
             </div>
 
             <div class="adress-grid-2">
               <div>
                 <label for="cidade">Cidade:</label>
-                <input type="text" id="cidade" name="cidade" placeholder="" required>
+                <input type="text" id="cidade" name="Cidade" placeholder="" required>
               </div>
 
               <div>
                 <label for="uf">Estado:</label>
-                <select name="uf" id="uf" required>
+                <select name="Estado" id="uf" required>
                   <option value="" selected="selected" disabled="disabled">Estado</option>
                   <option value="AC">AC</option>
                   <option value="AL">AL</option>
@@ -1237,21 +1241,21 @@
   <footer class="footer">
     <div class="container footer-container">
       <h2 class="title-footer">Sobre o site</h2>
-      <p class="paragraph p-footer">O serviço prestado através do site www.linkdositemei.com é um serviço privado e opcional. O registro MEI, baixa no CNPJ do MEI e alterações no cadastro do MEI podem ser feitos, gratuitamente sem o acompanhamento profissional deste site, através da plataforma governamental.</p>
+      <p class="paragraph p-footer">O serviço prestado através do site https://cadastromei.com.br/ é um serviço privado e opcional. O registro MEI, baixa no CNPJ do MEI e alterações no cadastro do MEI podem ser feitos, gratuitamente sem o acompanhamento profissional deste site, através da plataforma governamental.</p>
       <div class="lists-footer">
         <ul>
           <h2 class="title-footer">Contato</h2>
-          <li><a href="">contato@linkdositemei.com.br</a></li>
+          <li><a href="">contato@cadastromei.com.br</a></li>
           <li><a href="">(62) 98222-2222</a></li>
         </ul>
         <ul>
           <h2 class="title-footer">Serviços</h2>
           <li><a href="criarmei.html">Criar MEI</a></li>
-          <li><a href="">Alterar MEI</a></li>
-          <li><a href="">Cancelar MEI</a></li>
+          <li><a href="criarmei.html">Alterar MEI</a></li>
+          <li><a href="criarmei.html">Cancelar MEI</a></li>
         </ul>
       </div>
-      <p class="paragraph copy">© MEI 2022. Todos os Direitos Reservados.</p>
+      <p class="paragraph copy">© Cadastro MEI 2022. Todos os Direitos Reservados.</p>
     </div>
   </footer>
 </body>

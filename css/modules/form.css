@@ -2,7 +2,6 @@
   padding: 0 20px;
 }
 
-
 .container-mei {
   max-width: 960px;
   margin: 140px auto 30px;
@@ -30,6 +29,8 @@
 
 .input-service:focus + label,
 .input-service:checked + label {
+  background: url('../../assets/checked.svg') no-repeat;
+  background-position: 96% 50%;
   background-color: var(--yellow);
   color: var(--blue);
 }
