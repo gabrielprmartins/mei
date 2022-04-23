@@ -47,13 +47,12 @@
     <div class="container container-form">
       <form action="./enviar.php" method="post" class="mei-form">
         <h2 class="title-form">Escolha o serviço</h2>
-        <input type="radio" name="Serviço" id="criarmei" value="Criar MEI" class="input-service" checked>
-        <label for="criarmei" class="label-service">Criar MEI</label>
-        <input type="radio" name="Serviço" id="cancelarmei" value="Cancelar MEI" class="input-service">
-        <label for="cancelarmei" class="label-service">Cancelar MEI</label>
-        <input type="radio" name="Serviço" id="alterarmei" value="Alterar MEI" class="input-service">
-        <label for="alterarmei" class="label-service">Alterar MEI</label>
-
+        <input type="radio" name="servico" id="criar" value="criar" class="input-service" checked>
+        <label for="criar" class="label-service">Criar MEI</label>
+        <input type="radio" name="servico" id="alterar" value="alterar" class="input-service">
+        <label for="alterar" class="label-service">Alterar MEI</label>
+        <input type="radio" name="servico" id="cancelar" value="cancelar" class="input-service">
+        <label for="cancelar" class="label-service">Cancelar MEI</label>
         <h2 class="title-form">Dados Pessoais</h2>
         <div class="personal-data">
           <div>
@@ -1250,14 +1249,16 @@
         </ul>
         <ul>
           <h2 class="title-footer">Serviços</h2>
-          <li><a href="criarmei.html">Criar MEI</a></li>
-          <li><a href="criarmei.html">Alterar MEI</a></li>
-          <li><a href="criarmei.html">Cancelar MEI</a></li>
+          <li><a href="service.html">Criar MEI</a></li>
+          <li><a href="service.html">Alterar MEI</a></li>
+          <li><a href="service.html">Cancelar MEI</a></li>
         </ul>
       </div>
       <p class="paragraph copy">© Cadastro MEI 2022. Todos os Direitos Reservados.</p>
     </div>
   </footer>
+
+  <script src="script/script.js"></script>
 </body>
 
 </html>

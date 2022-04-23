@@ -23,8 +23,10 @@
   grid-template-columns: 1fr 30px;
   align-items: center;
   cursor: pointer;
-  padding: 20px 0px;
+  padding: 20px 10px;
+  margin: 0;
   position: relative;
+  border-radius: 5px;
 }
 
 .checkbox-wrapper label:hover {
@@ -37,7 +39,7 @@
   color: var(--blue);
   font-weight: bold;
   font-size: 1.4rem;
-  right: 0px;
+  right: 10px;
 }
 
 .checkbox-wrapper {
@@ -51,6 +53,7 @@
 .faq-list input:checked + .checkbox-wrapper p {
   display: block;
   margin-top: 10px;
+  padding: 0 10px;
 }
 
 .faq-list input:checked + .checkbox-wrapper {
