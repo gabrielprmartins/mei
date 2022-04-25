@@ -1194,7 +1194,7 @@
             </div>
           </div>
         </div>
-        <button class="button-payment">Realizar Pagamento</button>
+        <button class="button-payment">Enviar</button>
       </form>
     </div>
   </section>
@@ -1257,6 +1257,25 @@
       <p class="paragraph copy">© Cadastro MEI 2022. Todos os Direitos Reservados.</p>
     </div>
   </footer>
+
+  <div class="modal-container active">
+    <div class="modal check-modal active">
+      <button class="close-modal">-</button>
+      <h1><img src="assets/checked-green.svg" class="modal-img"> Tudo certo!</h1>
+      <p>Formulário enviado com sucesso! Faça o pagamento abaixo e em breve entraremos em contato.</p>
+      <a href="https://pag.ae/7YaqaCjX7" class="button-payment button-modal">Pagar com PagSeguro</a>
+      <p class="p-secure-payment"><img src="assets/padlock.svg" />Pagamento seguro no próprio site da PagSeguro</p>
+    </div>
+    <div class="modal check-modal error-modal">
+      <button class="close-modal">-</button>
+      <h1><img src="assets/error.svg" class="modal-img">Erro no envio!</h1>
+      <p>Faça o download do formulário em PDF <a href="assets/form/formulario-mei.pdf" class="a-link" download="formulario-mei">clicando aqui</a>. Depois preencha e encaminhe para o nosso e-mail:</p>
+      <p class="email-modal">contato@cadastromei.com.br</p>
+      <p>Após isso, realize o pagamento por meio do PagSeguro e em breve entraremos em contato.</p>
+      <a href="https://pag.ae/7YaqaCjX7" class="button-payment button-modal">Pagar com PagSeguro</a>
+      <p class="p-secure-payment"><img src="assets/padlock.svg" />Pagamento seguro no próprio site da PagSeguro</p>
+    </div>
+  </div>
 
   <script src="script/script.js"></script>
 </body>
