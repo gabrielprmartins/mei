@@ -9,7 +9,7 @@ function handleScroll() {
   }
 }
 
-window.addEventListener('scroll', handleScroll);
+if (header) window.addEventListener('scroll', handleScroll);
 
 // Parameters service
 const parameters = new URLSearchParams(location.search);
@@ -37,7 +37,7 @@ function handleClickButtonMenu() {
   }
 }
 
-buttonMenu.addEventListener('click', handleClickButtonMenu);
+if (buttonMenu) buttonMenu.addEventListener('click', handleClickButtonMenu);
 
 // Form
 const form = document.querySelector('.mei-form');
@@ -90,6 +90,42 @@ function handleSubmit(event) {
   fetch('./enviar.php', { method: 'POST', body: data }).then(formSent);
 }
 
-if (form) {
-  form.addEventListener('submit', handleSubmit);
+if (form) form.addEventListener('submit', handleSubmit);
+
+// Adress by cep
+const cep = document.getElementById('cep');
+const street = document.getElementById('rua');
+const number = document.getElementById('numero');
+const district = document.getElementById('bairro');
+const city = document.getElementById('cidade');
+const state = document.getElementById('uf');
+
+function formatCep(cep) {
+  const regex = /^([\d]{2})([\d]{3})([\d]{3})|^[\d]{2}.[\d]{3}-[\d]{3}/;
+  if (regex.test(cep)) return cep;
+  else return false;
 }
+
+function fillAdress(obj) {
+  const { logradouro, numero, bairro, localidade, uf } = obj;
+  if (logradouro) street.value = logradouro;
+  if (numero) number.value = numero;
+  if (bairro) district.value = bairro;
+  if (localidade) city.value = localidade;
+  if (uf) state.value = uf;
+}
+
+async function fetchCep(cep) {
+  const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+  const json = await response.json();
+  return fillAdress(json);
+}
+
+function handleBlur(event) {
+  const cepValue = formatCep(event.target.value);
+  if (cepValue) {
+    fetchCep(cepValue);
+  }
+}
+
+if (cep) cep.addEventListener('blur', handleBlur);
